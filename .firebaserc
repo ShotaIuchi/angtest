@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "si-cloud-navi": {
+      "hosting": {
+        "angtest1": [
+          "si-cloud-navi"
+        ]
+      }
+    }
+  }
+}

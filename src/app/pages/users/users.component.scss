@@ -1,0 +1,33 @@
+table {
+  width: 100%;
+}
+
+.state {
+  flex: content;
+}
+
+.state1 {
+  @extend .state;
+  color:green;
+}
+
+.UNKNOWN {
+  @extend .state;
+  color:darkgray;
+}
+    // // 休み
+    // HOLIDAY = 1,
+    // // 休憩中
+    // BREAK = 2,
+    // // 待機中
+    // WAIT = 3,
+    // // 順調
+    // GOOD = 10,
+    // // 普通
+    // NORMAL = 11,
+    // // 遅延
+    // DELAY = 12,
+
+th.mat-sort-header-sorted {
+  color: black;
+}

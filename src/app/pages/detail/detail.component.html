@@ -1,0 +1,37 @@
+<div class="parent">
+  <!-- <app-map class="parent" [point]="items"></app-map> -->
+
+  <google-map
+    class="parent"
+    *ngIf="apiLoaded | async"
+    height="100%"
+    width="100%"
+    [center]="center"
+    [zoom]="zoom"
+    [options]="options"
+    (mapClick)="addMarker($event)"
+    (mapMousemove)="move($event)"
+  >
+    <!-- <map-marker
+      *ngFor="let markerPosition of markerPositions"
+      [position]="markerPosition"
+      [options]="markerOptions"
+      (mapClick)="moveMap($event)"
+    ></map-marker> -->
+    <map-marker
+      *ngFor="let m of marker"
+      [position]="m.position"
+      [options]="m.option"
+      (mapClick)="moveMap($event)"
+    ></map-marker>
+  </google-map>
+
+  <div class="child">
+    <div cdkDropList class="list" (cdkDropListDropped)="drop($event)">
+      <div class="box" *ngFor="let item of items; index as i" cdkDrag>
+        <!-- {{i+1|number:"3.0"}}. {{item.geo.lat}}-{{item.geo.lng}} -->
+        {{i+1|number:"3.0"}}. {{item.name}}
+      </div>
+    </div>
+  </div>
+</div>

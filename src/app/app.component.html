@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    (click)="drawer.toggle()"
+    aria-label="サイドバーの開閉"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="title">
+    <a routerLink="/">{{title}}</a>
+  </div>
+</mat-toolbar>
+
+<mat-drawer-container class="container">
+  <mat-drawer #drawer class="sidenav" mode="side" opened="true">
+    <mat-selection-list #shoes [multiple]="false">
+      <mat-list-option routerLink="/">配送状況</mat-list-option>
+      <mat-list-option routerLink="/request">配送指示</mat-list-option>
+      <mat-list-option routerLink="/settings">設定</mat-list-option>
+    </mat-selection-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

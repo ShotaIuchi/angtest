@@ -1,0 +1,24 @@
+.title {
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.sidenav {
+  padding: 0px;
+}
+
+.sidenav-content {
+  /* display: flex; */
+  display: inline;
+  /* background-color: aqua; */
+  width: 100%;
+  height: 100%;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
